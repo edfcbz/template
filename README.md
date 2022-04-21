@@ -120,7 +120,7 @@ requirements first, and then improving other technical aspects with the creation
             In body section type: { "id": 1}</br>     
             
 * 2 - **Analytics</br>
-    * 2.1 - Total revenue in <2020> **GET http://localhost:5000/analytics/2020**</br>
+    * 2.1 - Total revenue in 2020 and other years **GET http://localhost:5000/analytics/2020** or type 2019, 2021 etc</br>
     * 2.2 - The average revenue of orders made on a mobile device (smartphone or tablet) **GET http://localhost:5000/analytics/average/<device_type>**</br>
     * 2.3 - The average number of products per order **GET http://localhost:5000/analytics/average_product_order**</br>
     * 2.4 - One route that returns all the statistics  **GET http://localhost:5000/analytics**</br>
