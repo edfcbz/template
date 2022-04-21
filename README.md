@@ -97,8 +97,13 @@ I recognize that the project has Software Engineering flaws and that it also nee
 ## ⚙️ Business Requirements X API Endpoint
 * 1 - **Product
     * 1.1 - Create a new product **POST http://localhost:5000/product**
+            In body section type: {"name":"name product", "description":"Product description"}
     * 1.2 - View the full list of products **GET http://localhost:5000/product**
     * 1.3 - Update product information **PUT http://localhost:5000/product**
+            In body section type: { "id": 1, 
+                                    "name":"new name product", 
+                                    "description":"new Product description"
+                                  }
     * 1.4 - Delete a produc **DELETE http://localhost:5000/product**
            
 * 2 - **Analytics
