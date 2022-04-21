@@ -83,6 +83,7 @@ I recognize that the project has Software Engineering flaws and that it also nee
 **6 - Any major issues encountered and the solutions found (or not)**
     * 6.1 - Date format in Analytics.py file was not valid for database. Was created a function to convert in valid date
     * 6.2 - New visitor in Analytic.py file is string while the Entity is Boolean. Was created a function that read the value as 'Yes' or 'No' and setting 0 or 1
+    * 6.3 - Amount field has commas "," as separator. This was the easiest to solve using replace method
 
 
 ## 🛠️ Tools Technical Requirements
@@ -93,6 +94,33 @@ I recognize that the project has Software Engineering flaws and that it also nee
 * 4 - Http request tool as Postman or similar  
 
 
+## ⚙️ Business Requirements X API Endpoint
+* 1 - **Product
+    * 1.1 - Create a new product **POST http://localhost:5000/product**
+    * 1.2 - View the full list of products **GET http://localhost:5000/product**
+    * 1.3 - Update product information **PUT http://localhost:5000/product**
+    * 1.4 - Delete a produc **DELETE http://localhost:5000/product**
+           
+* 2 - **Analytics
+    * 2.1 - Total revenue in <2020> **GET http://localhost:5000/analytics/2020**
+    * 2.2 - The average revenue of orders made on a mobile device (smartphone or tablet) **GET http://localhost:5000/analytics/average/<device_type>**
+    * 2.3 - The average number of products per order **GET http://localhost:5000/analytics/average_product_order**
+    * 2.4 - One route that returns all the statistics  **GET http://localhost:5000/analytics**
+
+* 3 - **Import
+    * 3.1 - Endpoint to importing Analytics data to database **GET http://localhost:5000/import**
+ 
+
+
+
+
+
+
+* 3 - **Import
+    * 3.1 - Endpoint to importing Analytics data to database **GET http://localhost:5000/import**
+ 
+ 
+    
 ## 🚀 Starting Database and Environment
 Fellow the below step for run the project
 
