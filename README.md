@@ -117,7 +117,8 @@ requirements first, and then improving other technical aspects with the creation
                                     "description":"new Product description"</br>
                                   }</br>
     * 1.4 - Delete a produc **DELETE http://localhost:5000/product**</br>
-           
+            In body section type: { "id": 1}</br>     
+            
 * 2 - **Analytics</br>
     * 2.1 - Total revenue in <2020> **GET http://localhost:5000/analytics/2020**</br>
     * 2.2 - The average revenue of orders made on a mobile device (smartphone or tablet) **GET http://localhost:5000/analytics/average/<device_type>**</br>
