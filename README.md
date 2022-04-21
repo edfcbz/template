@@ -1,119 +1,131 @@
 # This repository has a REST API for Product and Analytics entities
 
-This project presents an API Flask Implementation, as requirement for BackEnd Developer position at Osedea Corporation. All details as Business Requirements, Stack Technologies, Solutions Developed and API endpoint presentation and tests are showed below. Thanks for review !
+This project presents an API Flask Implementation, as requirement for BackEnd Developer position at Osedea Corporation.</br> 
+All details as Business Requirements, Stack Technologies, Solutions Developed and API endpoint presentation and tests are showed below. Thanks for review !</br>
 
-## 📋 Business Requirements
-A client wants to develop a dashboard to analyze the sales results of their ecommerce website.
-Two kinds of users will be able to access to the dashboard: admins and managers. So the client need an API for Product and Statistics information as defined in the User Story below.
+## 📋 Business Requirements </br>
+A client wants to develop a dashboard to analyze the sales results of their ecommerce website.</br>
+Two kinds of users will be able to access to the dashboard: admins and managers. </br>
+So the client need an API for Product and Statistics information as defined in the User Story below.</br>
 
-* 1 - **Entities details and Funcionability**
+* 1 - **Entities details and Funcionability**</br>
   * 1.1 - **Product : Atributes** id:int, name:string, description:string</br>
-           * 1.1.1 - Create a new product
-           * 1.1.2 - View the full list of products
-           * 1.1.3 - Update product information
-           * 1.1.4 - Delete a produc
+           * 1.1.1 - Create a new product</br>
+           * 1.1.2 - View the full list of products</br>
+           * 1.1.3 - Update product information</br>
+           * 1.1.4 - Delete a produc</br>
            
   * 1.2 - **Analytics : Atributes** id:int, order_id:int, date:datetime, session_duration:int, nb_products:int, amount:float, new_visitor:string, device_type:string</br>
            * 1.2.1 - Total revenue in 2020</br>
            * 1.2.2 - The average revenue of orders made on a mobile device (smartphone or tablet)</br>
            * 1.2.3 - The average number of products per order</br>
-           * 1.2.4 - One route that returns all the statistics
+           * 1.2.4 - One route that returns all the statistics</br>
            
-* 2 - **Rules**
-  * 2.1 - The admins can access to all the statistics
-  * 2.2 - The managers can't access to the revenue statistics
+* 2 - **Rules**</br>
+  * 2.1 - The admins can access to all the statistics</br>
+  * 2.2 - The managers can't access to the revenue statistics</br>
 
-* 3 - **Future Need**
-  * 3.1 - Create new user roles with different data access in the future
-  * 3.2 - New metrics might be available in a next version of the CSV file
+* 3 - **Future Need**</br>
+  * 3.1 - Create new user roles with different data access in the future</br>
+  * 3.2 - New metrics might be available in a next version of the CSV file</br>
 
-## ⚙️ Main Technologies
-* 1 - **Flask** Endpoint and infraestruture
-* 2 - **SQLAlchemy** Database acess and configuration
-* 3 - **Blueprint** Integrate different endpoint file
+## ⚙️ Main Technologies</br>
+* 1 - **Flask** Endpoint and infraestruture</br>
+* 2 - **SQLAlchemy** Database acess and configuration</br>
+* 3 - **Blueprint** Integrate different endpoint file</br>
 
-## ⚙️ Architecture ( MVC Pattern )
-To meet the functional requirements indicated by the customer, all services (endpoint) are available in a single app.py file. This approach does not represent the cohesion and coupling best practices described in Software Engineering. Therefore, some improvement points are described below and will be implemented in next release.
-* 1 - **Entities**
-    * 1.1 - Create different endpoint file for each entity (Product, Analytics and other)
-* 2 - **Models**
-    * 2.1 - Create a file for different Entities
-* 3 - **Configurations**
-    * 3.1 - Create a file for configurations
-* 4 - **Utils module** 
-    * 4.1 - Create a file for utils functions
+## ⚙️ Architecture ( MVC Pattern )</br>
+To meet the functional requirements indicated by the customer, all services (endpoint) are available in a single app.py file.</br> 
+This approach does not represent the cohesion and coupling best practices described in Software Engineering.</br> 
+Therefore, some improvement points are described below and will be implemented in next release.</br>
+* 1 - **Entities**</br>
+    * 1.1 - Create different endpoint file for each entity (Product, Analytics and other)</br>
+* 2 - **Models**</br>
+    * 2.1 - Create a file for different Entities</br>
+* 3 - **Configurations**</br>
+    * 3.1 - Create a file for configurations</br>
+* 4 - **Utils module** </br>
+    * 4.1 - Create a file for utils functions</br>
 
-## ⚙️ The Project Development
-  **Developper Feedback**
-  Despite working with systems development with a focus on backend for almost 20 years, developing this REST API using Python, Flask and SQLAlchemy was an extra challenge, as they are technologies with which I had no practical experience until the moment I started the implementation of the API.</br>
+## ⚙️ The Project Development</br>
+  **Developper Feedback**</br>
+  Despite working with systems development with a focus on backend for almost 20 years, developing this REST API using Python, </br>
+  Flask and SQLAlchemy was an extra</br> challenge, as they are technologies with which I had no practical experience until the moment</br> 
+  I started the implementation of the API.</br>
 
-In the 4 days of deadline I had to research, learn and implement the entire project. Some tutorials on youtube gave me the minimum knowledge necessary to start coding and prepare my "Hello World", which gradually grew to meet the customer's needs.</br>
+In the 4 days of deadline I had to research, learn and implement the entire project.</br>
+Some tutorials on youtube gave me the minimum knowledge necessary to start coding and prepare my "Hello World", </br>
+which gradually grew to meet the customer's needs.</br>
 
-I recognize that the project has Software Engineering flaws and that it also need applying advanced concepts of the technologies used, but that's for a next release.</br>
+I recognize that the project has Software Engineering flaws and that it also need applying advanced </br>
+concepts of the technologies used, but that's for a next release.</br>
 
-**1 - How the problem was approached** Step by step, and the first point was to try to understand how technologies are used in their simplest forms. From this central idea, all the features were developed in the simplest way and without architectural concerns.</br>
+**1 - How the problem was approached** Step by step, and the first point was to try to understand how technologies are</br> 
+used in their simplest forms. From this central idea, all the features were developed in the simplest way and without architectural concerns.</br>
 
-**2 - Explain your reasoning behind any technical decisions you made** As an experienced developer, I know the importance of a good MVC development model, but the approach to project development was to focus on learning, coding and meeting the business requirements first, and then improving other technical aspects with the creation of modules of business and blueprint integration
+**2 - Explain your reasoning behind any technical decisions you made** As an experienced developer, I know the importance</br> 
+of a good MVC development model, but the approach to project development was to focus on learning, coding and meeting the business</br> 
+requirements first, and then improving other technical aspects with the creation of modules of business and blueprint integration</br>
 
-**3 - Best practices or changes you would make if this were a real production app**
-    * 1.1 - Token generation dynamically and valid for a few minutes
-    * 1.2 - Not use email as user name
-    * 1.3 - Create a Analytics.csv table for importing control, avoinding import the same file twice
-    * 1.4 - Create Project Test using framework Rest-Assured for API Test
-    * 1.5 - Create a hook from GitLab and Jenkins, SonarQube, Quality Gate for CD/CI Environment pipeline
-    * 1.6 - Use the SGBD like MySQL, PortGres
-    * 1.7 - Create different layer project 
-      ** 1.7.1 - Controller (endpoint)
-      ** 1.7.2 - Data Transfer Object DTO/VO
-      ** 1.7.3 - Business Object BO
-      ** 1.7.4 - DAO
-    * 1.8 - Load Balance and Backup
-    * 1.9 - Create a LOG funcionallity
-    * 1.10 - Data importing functionality by assincronous methodology
+**3 - Best practices or changes you would make if this were a real production app**</br>
+    * 1.1 - Token generation dynamically and valid for a few minutes</br>
+    * 1.2 - Not use email as user name</br>
+    * 1.3 - Create a Analytics.csv table for importing control, avoinding import the same file twice</br>
+    * 1.4 - Create Project Test using framework Rest-Assured for API Test</br>
+    * 1.5 - Create a hook from GitLab and Jenkins, SonarQube, Quality Gate for CD/CI Environment pipeline</br>
+    * 1.6 - Use the SGBD like MySQL, PortGres</br>
+    * 1.7 - Create different layer project</br> 
+      ** 1.7.1 - Controller (endpoint)</br>
+      ** 1.7.2 - Data Transfer Object DTO/VO</br>
+      ** 1.7.3 - Business Object BO</br>
+      ** 1.7.4 - DAO</br>
+    * 1.8 - Load Balance and Backup</br>
+    * 1.9 - Create a LOG funcionallity</br>
+    * 1.10 - Data importing functionality by assincronous methodology</br>
      
-**4 - Any learning resources used**
-    * 4.1 - Youtube
-    * 4.2 - Blogs and tutorials
-    * 4.3 - Official documentation (Flask, SQLALchemy)
+**4 - Any learning resources used**</br>
+    * 4.1 - Youtube</br>
+    * 4.2 - Blogs and tutorials</br>
+    * 4.3 - Official documentation (Flask, SQLALchemy)</br>
 
-**5 - if some steps were not completed, the steps you would have taken in your approach to complete them**
-    * 5.1 - Dockerization was not completed. Actions: Improve knowledge about Decker
-    * 5.2 - User authentication was not completed until today (04/21). I'll try complete it in 04/22 
+**5 - if some steps were not completed, the steps you would have taken in your approach to complete them**</br>
+    * 5.1 - Dockerization was not completed. Actions: Improve knowledge about Decker</br>
+    * 5.2 - User authentication was not completed until today (04/21). I'll try complete it in 04/22 </br>
 
-**6 - Any major issues encountered and the solutions found (or not)**
-    * 6.1 - Date format in Analytics.py file was not valid for database. Was created a function to convert in valid date
-    * 6.2 - New visitor in Analytic.py file is string while the Entity is Boolean. Was created a function that read the value as 'Yes' or 'No' and setting 0 or 1
-    * 6.3 - Amount field has commas "," as separator. This was the easiest to solve using replace method
-
-
-## 🛠️ Tools Technical Requirements
-
-* 1 - MySQL Database (SGBD Tool)
-* 2 - Python version 3.9
-* 3 - VS Code IDE
-* 4 - Http request tool as Postman or similar  
+**6 - Any major issues encountered and the solutions found (or not)**</br>
+    * 6.1 - Date format in Analytics.py file was not valid for database. Was created a function to convert in valid date</br>
+    * 6.2 - New visitor in Analytic.py file is string while the Entity is Boolean. Was created a function that read the value as 'Yes' or 'No' and setting 0 or 1</br>
+    * 6.3 - Amount field has commas "," as separator. This was the easiest to solve using replace method</br>
 
 
-## ⚙️ Business Requirements X API Endpoint
-* 1 - **Product
-    * 1.1 - Create a new product **POST http://localhost:5000/product**
-            In body section type: {"name":"name product", "description":"Product description"}
-    * 1.2 - View the full list of products **GET http://localhost:5000/product**
-    * 1.3 - Update product information **PUT http://localhost:5000/product**
-            In body section type: { "id": 1, 
-                                    "name":"new name product", 
-                                    "description":"new Product description"
-                                  }
-    * 1.4 - Delete a produc **DELETE http://localhost:5000/product**
+## 🛠️ Tools Technical Requirements</br>
+
+* 1 - MySQL Database (SGBD Tool)</br>
+* 2 - Python version 3.9</br>
+* 3 - VS Code IDE</br>
+* 4 - Http request tool as Postman or similar</br>  
+
+
+## ⚙️ Business Requirements X API Endpoint</br>
+* 1 - **Product</br>
+    * 1.1 - Create a new product **POST http://localhost:5000/product**</br>
+            In body section type: {"name":"name product", "description":"Product description"}</br>
+    * 1.2 - View the full list of products **GET http://localhost:5000/product**</br>
+    * 1.3 - Update product information **PUT http://localhost:5000/product**</br>
+            In body section type: { "id": 1, </br>
+                                    "name":"new name product", </br>
+                                    "description":"new Product description"</br>
+                                  }</br>
+    * 1.4 - Delete a produc **DELETE http://localhost:5000/product**</br>
            
-* 2 - **Analytics
-    * 2.1 - Total revenue in <2020> **GET http://localhost:5000/analytics/2020**
-    * 2.2 - The average revenue of orders made on a mobile device (smartphone or tablet) **GET http://localhost:5000/analytics/average/<device_type>**
-    * 2.3 - The average number of products per order **GET http://localhost:5000/analytics/average_product_order**
-    * 2.4 - One route that returns all the statistics  **GET http://localhost:5000/analytics**
+* 2 - **Analytics</br>
+    * 2.1 - Total revenue in <2020> **GET http://localhost:5000/analytics/2020**</br>
+    * 2.2 - The average revenue of orders made on a mobile device (smartphone or tablet) **GET http://localhost:5000/analytics/average/<device_type>**</br>
+    * 2.3 - The average number of products per order **GET http://localhost:5000/analytics/average_product_order**</br>
+    * 2.4 - One route that returns all the statistics  **GET http://localhost:5000/analytics**</br>
 
-* 3 - **Import
-    * 3.1 - Endpoint to importing Analytics data to database **GET http://localhost:5000/import**
+* 3 - **Import</br>
+    * 3.1 - Endpoint to importing Analytics data to database **GET http://localhost:5000/import**</br>
  
 
 
