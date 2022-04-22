@@ -49,8 +49,7 @@ Therefore, some improvement points are described below and will be implemented i
 
 ## ⚙️ The Project Development</br>
   **Developper Feedback**</br>
-  Despite working with systems development with a focus on backend for almost 20 years, developing this REST API using Python, 
-  Flask and SQLAlchemy was an extra challenge, because I no had practical experience until the moment, and in 4 days I had to research, learn, implement and document the developed solution. Some tutorials on youtube, gave me the minimum knowledge necessary to start coding and prepare my "Hello World", which gradually grew to meet the customer's needs. I recognize that the project has technical debt and Software Engineering gaps, but that's for a next release.</br>
+  Despite working with systems development with a focus on backend for almost 20 years, developing this REST API using Python, Flask and SQLAlchemy was an extra challenge, because I did not have practical experience until the moment, and in 4 days I had to research, learn, implement and document the developed solution. Some tutorials on youtube, gave me the minimum knowledge necessary to start coding and prepare my "Hello World", which gradually grew to meet the customer's needs. Recognize that the project has technical debt and Software Engineering gaps, but that's for a next release.</br>
   
 **Schedule**
 04/19 day: Technologies review and "Hello World" 
@@ -75,10 +74,10 @@ requirements first, and then improving other technical aspects with the creation
     * 3.7 - Create different layer project</br> 
       ** 3.7.1 - Controller (endpoint)</br>
       ** 3.7.2 - Data Transfer Object DTO/VO/BO</br>
-      ** 3.7.3 - Business BO Micro services Layer</br>
-      ** 3.7.4 - DAO</br>
+      ** 3.7.3 - Business BO microservices Layer</br>
+      ** 3.7.4 - DAO Layer</br>
     * 3.8 - Load Balance and Backup</br>
-    * 3.9 - Create a LOG funcionallity</br>
+    * 3.9 - Create a LOG funcionallity and endpoints for it</br>
     * 3.10 - Data importing functionality by asynchronous function methodology</br>
     * 3.11 - Create Exception class for entity and endpoint
     * 3.12 - Adopt the UUID type as Entity.id (Increase the security in Http GET request, avoinding robot actions)
@@ -101,7 +100,6 @@ requirements first, and then improving other technical aspects with the creation
     * 6.3 - Amount field has commas "," as separator and not is accept in database. This was the easiest to solve using replace method from string class</br>
 
 ## 🛠️ Tools Technical Requirements</br>
-
 * 1 - MySQL Database (SGBD Tool)</br>
 * 2 - Python version 3.9.4</br>
 * 3 - VS Code IDE and plugins</br>
@@ -110,22 +108,22 @@ requirements first, and then improving other technical aspects with the creation
 ## ⚙️ Business Requirements X API Endpoint</br>
 * 1 - **Product</br>
     * 1.1 - Create a new product **Http POST http://localhost:5000/product**</br>
-            In body section type: {"name":"Name product", "description":"Product description"}</br>
+            In body section type: {"name":"name product", "description":"product description"}</br>
     * 1.2 - View the full list of products **Http GET http://localhost:5000/product**</br>
-    * 1.3 - Find product by id (bonus) **Http GET http://localhost:5000/product/<id>**</br> 
+    * 1.3 - Find product by id (bonus endpoint) **Http GET http://localhost:5000/product/<id>**</br> 
     * 1.4 - Update product information **Http PUT http://localhost:5000/product**</br>
             In body section type: { "id": 1, </br>
                                     "name":"new name product", </br>
-                                    "description":"new Product description"</br>
+                                    "description":"new product description"</br>
                                   }</br>
-    * 1.5 - Delete a produc **Http DELETE http://localhost:5000/product**</br>
+    * 1.5 - Delete a product **Http DELETE http://localhost:5000/product**</br>
             In body section type: { "id": 1}</br>     
             
 * 2 - **Analytics</br>
-    * 2.1 - Total revenue in 2020 and other years **Http GET http://localhost:5000/analytics/2020** or type 2019, 2021 etc</br>
-    * 2.2 - The average revenue of orders made on a mobile device (smartphone or tablet) **Http GET http://localhost:5000/analytics/average/<device_type>**</br>
+    * 2.1 - Total revenue in 2020 and other years **Http GET http://localhost:5000/analytics/<years>** replacing <year> with the desired year as:, 2019, 2020, 2021 etc</br>
+    * 2.2 - The average revenue of orders made on a mobile device (smartphone or tablet) **Http GET http://localhost:5000/analytics/average/<device_type>** replacing <device> with the desired device as: tablet, desktop ou smartphone</br>
     * 2.3 - The average number of products per order **Http GET http://localhost:5000/analytics/average_product_order**</br>
-    * 2.4 - One route that returns all the statistics  **Http GET http://localhost:5000/analytics**</br>
+    * 2.4 - One route that returns all the statistics  **Http GET http://localhost:5000/analytics** Feature not finalized</br>
 
 * 3 - **Import</br>
     * 3.1 - Endpoint to importing Analytics data to database **Http GET http://localhost:5000/import**</br>
