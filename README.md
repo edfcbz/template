@@ -123,7 +123,7 @@ requirements first, and then improving other technical aspects with the creation
     * 2.1 - Total revenue in 2020 and other years **Http GET http://localhost:5000/analytics/<years>** replacing <year> with the desired year as:, 2019, 2020, 2021 etc</br>
     * 2.2 - The average revenue of orders made on a mobile device (smartphone or tablet) **Http GET http://localhost:5000/analytics/average/<device_type>** replacing <device> with the desired device as: tablet, desktop ou smartphone</br>
     * 2.3 - The average number of products per order **Http GET http://localhost:5000/analytics/average_product_order**</br>
-    * 2.4 - One route that returns all the statistics  **Http GET http://localhost:5000/analytics** Feature not finalized</br>
+    * 2.4 - One route that returns all the statistics  **Http GET http://localhost:5000/analytics** Obs.: Endpoint not finalized</br>
 
 * 3 - **Import</br>
     * 3.1 - Endpoint to importing Analytics data to database **Http GET http://localhost:5000/import**</br>
@@ -133,13 +133,13 @@ requirements first, and then improving other technical aspects with the creation
 * 2 - Install Python 3.9.4 
 * 3 - Download the source code from repository. Locate the app.py file and execute de command line in the same folder by CMD. >**python app.py**
 
-**WARNING VERY IMPORTANT**
+**VERY IMPORTANT WARNING**
 Before you run the application, be sure to choose a port that is not being used by other applications. Follow the steps below:
 
 **TIP 1** - Run CMD as Administrator and type de command line: netstat -a -n -o | findstr :**5000**  (5000 is default Flask port) 
-      (This command will show a line as: *TCP 0.0.0.0:8080 0.0.0.0:0 LISTENING 8457 (In this example, the port is been used by PID 8457 process). 
+      (This command will show a line as: *TCP 0.0.0.0:8080 0.0.0.0:0 LISTENING 8457 (In this example, the 5000 port is been used by PID 8457 process). 
       Choose another port and try again. Finding a free port, setting app.run(...) command line at the end of **app.py** file. 
-      In the project was selected the 5000 port. See the command line **app.run(port=5000, host='0.0.0.0', debug=True, threaded=True)**
+      In the project was selected the 5000 port. See details in the command line **app.run(port=5000, host='0.0.0.0', debug=True, threaded=True)**
       
 **TIP 2** - To finish the PID process in specific port, run CMD command line as Administrator: taskKill.exe /F /PID 8457 ( This command will show a line as: *SUCCESS: The process with PID 8457 was terminated. ( Or similar message ).
 
