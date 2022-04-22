@@ -1,7 +1,7 @@
 # This repository has a REST API for Product and Analytics entities
 
 This project presents an API Flask Implementation, as requirement for BackEnd Developer position at Osedea Corporation.</br> 
-All details as Business Requirements, Stack Technologies, Solutions Developed and API endpoint presentation and tests are showed below. Thanks for review !</br>
+All details as Business Requirements, Stack Technologies, Solutions Developed and API endpoint presentation and demontration are below. Thanks for review !</br>
 
 ## 📋 Business Requirements </br>
 A client wants to develop a dashboard to analyze the sales results of their ecommerce website.</br>
@@ -34,7 +34,7 @@ So the client need an API for Product and Statistics information as defined in t
 * 2 - **SQLAlchemy** Database acess and configuration</br>
 * 3 - **Blueprint** Integrate different endpoint file</br>
 
-## ⚙️ Architecture ( MVC Pattern )</br>
+## ⚙️ Architecture Improvement ( MVC Pattern )</br>
 To meet the functional requirements indicated by the customer, all services (endpoint) are available in a single app.py file.</br> 
 This approach does not represent the cohesion and coupling best practices described in Software Engineering.</br> 
 Therefore, some improvement points are described below and will be implemented in next release.</br>
@@ -77,7 +77,8 @@ requirements first, and then improving other technical aspects with the creation
     * 3.11 - Create Exception class for entity and endpoint
     * 3.12 - Adopt the UUID type as Entity.id (Increase the security in Http GET request, avoinding robot actions)
     * 3.13 - In Http DELETE, avoid id as parameter in URL
-     
+    * 3.14 - Refactory Importing function creating an object from analytics.csv file and apply the concepts as: analytics.id[i], analytics.date[i] etc.
+      
 **4 - Any learning resources used**</br>
     * 4.1 - Youtube</br>
     * 4.2 - Blogs and tutorials</br>
@@ -137,14 +138,6 @@ Before you run the application, be sure to choose a port that is not being used 
       In the project was selected the 5000 port. See the command line **app.run(port=5000, host='0.0.0.0', debug=True, threaded=True)**
       
 **TIP 2** - To finish the PID process in specific port, run CMD command line as Administrator: taskKill.exe /F /PID 8457 ( This command will show a line as: *SUCCESS: The process with PID 8457 was terminated. ( Or similar message ).
-
-## ⚙️ Testing environment
-* 1 - Open the browser and type URL Http GET http://localhost:5000/. You will receive the message "Welcome at main Flask page", showing that environmet is ok.
-
-## 📋 API Development - Review Technical Aspect and Improvement Suggestions
-* **1 ListingServiceBO.java**
-   
-
 
 ## 📌 Version
 V1.0
