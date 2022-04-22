@@ -83,40 +83,42 @@ requirements first, and then improving other technical aspects with the creation
     * 3.11 - Create Exception class for entity and endpoint
     * 3.12 - Adopt the UUID type as Entity.id (Increase the security in Http GET request, avoinding robot actions)
     * 3.13 - In Http DELETE, avoid id as parameter in URL
-    * 3.14 - Refactory Importing function creating an object from analytics.csv file and apply the concepts as: analytics.id[i], analytics.date[i] etc.
+    * 3.14 - Refactory Importing function creating an object from analytics.csv file and apply the concepts as: analytics.id[index], analytics.date[index] etc.
       
 **4 - Any learning resources used**</br>
-    * 4.1 - Youtube</br>
+    * 4.1 - Youtube channels</br>
     * 4.2 - Blogs and tutorials</br>
     * 4.3 - Official documentation (Flask, SQLALchemy)</br>
 
 **5 - if some steps were not completed, the steps you would have taken in your approach to complete them**</br>
-    * 5.1 - Dockerization was not completed. Actions: Improve knowledge about Decker</br>
-    * 5.2 - User authentication and acess permition was not completed until today (04/21). I'll try complete util PM last minute in 04/22 </br>
+    * 5.1 - Dockerization was not completed. Actions: Improve knowledge about Docker file and Docker compose</br>
+    * 5.2 - User authentication and acess permission was not completed until today (04/21). I'll try complete util PM last minute in 04/22 </br>
+    * 5.3 - SQLite did not response all endpoint, so the database was changed to MySQL 
 
 **6 - Any major issues encountered and the solutions found (or not)**</br>
-    * 6.1 - Date format in Analytics.py file was not valid for database. Was created a function to convert in valid date</br>
+    * 6.1 - Date format in Analytics.py file is not valid for database. Was created a function to convert in valid date</br>
     * 6.2 - New visitor in Analytic.py file is string while the Entity is Boolean. Was created a function that read the value as 'Yes' or 'No' and setting 0 or 1</br>
-    * 6.3 - Amount field has commas "," as separator. This was the easiest to solve using replace method</br>
+    * 6.3 - Amount field has commas "," as separator and not is accept in database. This was the easiest to solve using replace method from string class</br>
 
 ## 🛠️ Tools Technical Requirements</br>
 
 * 1 - MySQL Database (SGBD Tool)</br>
-* 2 - Python version 3.9</br>
-* 3 - VS Code IDE</br>
+* 2 - Python version 3.9.4</br>
+* 3 - VS Code IDE and plugins</br>
 * 4 - Http request tool as Postman or similar</br>  
 
 ## ⚙️ Business Requirements X API Endpoint</br>
 * 1 - **Product</br>
     * 1.1 - Create a new product **Http POST http://localhost:5000/product**</br>
-            In body section type: {"name":"name product", "description":"Product description"}</br>
+            In body section type: {"name":"Name product", "description":"Product description"}</br>
     * 1.2 - View the full list of products **Http GET http://localhost:5000/product**</br>
-    * 1.3 - Update product information **Http PUT http://localhost:5000/product**</br>
+    * 1.3 - Find product by id (bonus) **Http GET http://localhost:5000/product/<id>**</br> 
+    * 1.4 - Update product information **Http PUT http://localhost:5000/product**</br>
             In body section type: { "id": 1, </br>
                                     "name":"new name product", </br>
                                     "description":"new Product description"</br>
                                   }</br>
-    * 1.4 - Delete a produc **Http DELETE http://localhost:5000/product**</br>
+    * 1.5 - Delete a produc **Http DELETE http://localhost:5000/product**</br>
             In body section type: { "id": 1}</br>     
             
 * 2 - **Analytics</br>
@@ -129,7 +131,7 @@ requirements first, and then improving other technical aspects with the creation
     * 3.1 - Endpoint to importing Analytics data to database **Http GET http://localhost:5000/import**</br>
 
 ## 🚀 Starting Application and Environment
-* 1 - Install MySQL Server in default port. After that create a new database named osedea setting user as root and password as admin123
+* 1 - Install MySQL Server in default port. After that, create a new database named 'osedea' setting user as root and password as admin123
 * 2 - Install Python 3.9.4 
 * 3 - Download the source code from repository. Locate the app.py file and execute de command line in the same folder by CMD. >**python app.py**
 
