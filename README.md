@@ -51,7 +51,13 @@ Therefore, some improvement points are described below and will be implemented i
   **Developper Feedback**</br>
   Despite working with systems development with a focus on backend for almost 20 years, developing this REST API using Python, 
   Flask and SQLAlchemy was an extra challenge, because I no had practical experience until the moment, and in 4 days I had to research, learn, implement and document the developed solution. Some tutorials on youtube, gave me the minimum knowledge necessary to start coding and prepare my "Hello World", which gradually grew to meet the customer's needs. I recognize that the project has technical debt and Software Engineering gaps, but that's for a next release.</br>
-
+  
+**Schedule**
+04/19 day: Technologies review and "Hello World" 
+04/20 day: Product endpoint and Analytics import endpoint (Solved issues from .csv file as date, boolean values etc)
+04/21 day: Finishing import and build Analytics endpoint and tests
+04/22 day: Occasional adjustments, general review and documentation
+  
 **1 - How the problem was approached** Step by step, and the first point was to try to understand how technologies are</br> 
 used in their simplest forms. From this central idea, all the features were developed in the simplest way and without architectural concerns.</br>
 
@@ -68,8 +74,8 @@ requirements first, and then improving other technical aspects with the creation
     * 3.6 - Use the SGBD like MySQL, PortGres</br>
     * 3.7 - Create different layer project</br> 
       ** 3.7.1 - Controller (endpoint)</br>
-      ** 3.7.2 - Data Transfer Object DTO/VO</br>
-      ** 3.7.3 - Business Object BO</br>
+      ** 3.7.2 - Data Transfer Object DTO/VO/BO</br>
+      ** 3.7.3 - Business BO Micro services Layer</br>
       ** 3.7.4 - DAO</br>
     * 3.8 - Load Balance and Backup</br>
     * 3.9 - Create a LOG funcionallity</br>
@@ -86,13 +92,12 @@ requirements first, and then improving other technical aspects with the creation
 
 **5 - if some steps were not completed, the steps you would have taken in your approach to complete them**</br>
     * 5.1 - Dockerization was not completed. Actions: Improve knowledge about Decker</br>
-    * 5.2 - User authentication was not completed until today (04/21). I'll try complete it in 04/22 </br>
+    * 5.2 - User authentication and acess permition was not completed until today (04/21). I'll try complete util PM last minute in 04/22 </br>
 
 **6 - Any major issues encountered and the solutions found (or not)**</br>
     * 6.1 - Date format in Analytics.py file was not valid for database. Was created a function to convert in valid date</br>
     * 6.2 - New visitor in Analytic.py file is string while the Entity is Boolean. Was created a function that read the value as 'Yes' or 'No' and setting 0 or 1</br>
     * 6.3 - Amount field has commas "," as separator. This was the easiest to solve using replace method</br>
-
 
 ## 🛠️ Tools Technical Requirements</br>
 
@@ -100,7 +105,6 @@ requirements first, and then improving other technical aspects with the creation
 * 2 - Python version 3.9</br>
 * 3 - VS Code IDE</br>
 * 4 - Http request tool as Postman or similar</br>  
-
 
 ## ⚙️ Business Requirements X API Endpoint</br>
 * 1 - **Product</br>
